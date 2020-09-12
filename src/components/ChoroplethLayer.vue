@@ -114,7 +114,8 @@ export default {
         onEachFeature: (feature, layer) => {
           layer.on({
             mouseover: mouseover.bind(this),
-            mouseout: mouseout.bind(this)
+            mouseout: mouseout.bind(this),
+            click: mouseclick.bind(this)
           })
         }
       }
