@@ -19,7 +19,9 @@ function mouseover({ target }) {
   if (!L.Browser.ie && !L.Browser.opera) {
     target.bringToFront()
   }
+}
 
+function mouseclick({ target }) {
   let geojsonItem = target.feature.properties
   let item = this.geojsonData.data.find(
     x => x[this.idKey] == geojsonItem[this.geojsonIdKey]
@@ -49,7 +51,7 @@ function mouseout({ target }) {
     color: `#${this.strokeColor}`,
     dashArray: ""
   })
-  this.currentItem = { name: "", value: 0 }
+  // this.currentItem = { name: "", value: 0 }
 }
 
 export default {
